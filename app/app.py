@@ -11,8 +11,8 @@ st.markdown("Cette application utilise l'intelligence artificielle (modèle **Pr
 
 @st.cache_data
 def load_and_train_model():
-    # Chargement
-    df = pd.read_csv('../data/store_sales.csv')
+    # Chargement (adapté pour le déploiement)
+    df = pd.read_csv('data/store_sales.csv')
     df = df.rename(columns={'Date': 'ds', 'Sales': 'y'})
     df['ds'] = pd.to_datetime(df['ds'])
     
